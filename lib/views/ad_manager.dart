@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdManager {
@@ -14,13 +15,17 @@ class AdManager {
   static void loadBannerAd() {
     _bannerAd = BannerAd(
       adUnitId: bannerAdUnitId,
-      request: AdRequest(),
+      request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (_) {
-          print('Banner ad loaded.');
+          if (kDebugMode) {
+            print('Banner ad loaded.');
+          }
         },
         onAdFailedToLoad: (ad, error) {
-          print('Banner ad failed to load: $error');
+          if (kDebugMode) {
+            print('Banner ad failed to load: $error');
+          }
           ad.dispose(); // Dispose of the ad if it fails to load
         },
       ),

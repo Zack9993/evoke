@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           const Expanded(child: Center(child: Text('Home Screen Content'))),
-          Container(
+          SizedBox(
             height: 50,
             child: AdWidget(ad: AdManager.bannerAd!),
           ),
@@ -39,14 +39,14 @@ class HomeScreen extends StatelessWidget {
               title: const Text('Notifications'),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => NotificationScreen()));
+                    builder: (context) => const NotificationScreen()));
               },
             ),
             ListTile(
               title: const Text('Terms and Conditions'),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => TermsConditionsScreen()));
+                    builder: (context) => const TermsConditionsScreen()));
               },
             ),
           ],

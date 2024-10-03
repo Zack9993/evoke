@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
                 AppStatez().isDarkMode ? Brightness.dark : Brightness.light,
             primarySwatch: Colors.blue,
           ),
-          home: SplashScreen(), // Ensure SplashScreen is correctly implemented
+          home:
+              const SplashScreen(), // Ensure SplashScreen is correctly implemented
         );
       },
     );

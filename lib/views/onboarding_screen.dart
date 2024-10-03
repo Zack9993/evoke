@@ -51,7 +51,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
               );
             },
             child: const Text('Get Started'),
