@@ -35,7 +35,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 return Center(
                   child: Text(
                     onboardingTexts[index],
-                    style: TextStyle(fontSize: 24),
+                    style: const TextStyle(fontSize: 24),
                     textAlign: TextAlign.center,
                   ),
                 );
@@ -54,7 +54,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 MaterialPageRoute(builder: (context) => HomeScreen()),
               );
             },
-            child: Text('Get Started'),
+            child: const Text('Get Started'),
           ),
         ],
       ),

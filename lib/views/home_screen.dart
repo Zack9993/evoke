@@ -6,17 +6,19 @@ import 'notification_screen.dart';
 import 'terms_conditions_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     AdManager.loadBannerAd();
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       body: Column(
         children: [
-          Expanded(child: Center(child: Text('Home Screen Content'))),
+          const Expanded(child: Center(child: Text('Home Screen Content'))),
           Container(
             height: 50,
             child: AdWidget(ad: AdManager.bannerAd!),
@@ -27,21 +29,21 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
-              title: Text('Settings'),
+              title: const Text('Settings'),
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SettingsScreen()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const SettingsScreen()));
               },
             ),
             ListTile(
-              title: Text('Notifications'),
+              title: const Text('Notifications'),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => NotificationScreen()));
               },
             ),
             ListTile(
-              title: Text('Terms and Conditions'),
+              title: const Text('Terms and Conditions'),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => TermsConditionsScreen()));
