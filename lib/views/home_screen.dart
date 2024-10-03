@@ -1,4 +1,6 @@
+import 'package:evoke/views/ad_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'settings_screen.dart';
 import 'notification_screen.dart';
 import 'terms_conditions_screen.dart';
