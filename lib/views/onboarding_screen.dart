@@ -3,13 +3,15 @@ import 'package:flutter_page_indicator_tv/flutter_page_indicator.dart';
 import 'home_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _controller = PageController();
-  int _currentPage = 0;
 
   List<String> onboardingTexts = [
     "Welcome to the Gallery App!",
@@ -26,9 +28,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             child: PageView.builder(
               controller: _controller,
               onPageChanged: (index) {
-                setState(() {
-                  _currentPage = index;
-                });
+                setState(() {});
               },
               itemCount: onboardingTexts.length,
               itemBuilder: (context, index) {
