@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final appState = Provider.of<AppState>(context);
+    final appState = Provider.of<AppStatez>(context);
 
     return Scaffold(
       appBar: AppBar(

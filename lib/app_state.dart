@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppState with ChangeNotifier {
+class AppStatez with ChangeNotifier {
   bool _isDarkMode = false;
 
   bool get isDarkMode => _isDarkMode;

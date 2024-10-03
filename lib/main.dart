@@ -10,7 +10,7 @@ void main() {
       .initialize(); // Ensure you have the correct initialization for Google Mobile Ads
   runApp(
     ChangeNotifierProvider(
-      create: (context) => AppState(),
+      create: (context) => AppStatez(),
       child: MyApp(),
     ),
   );
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           title: 'Gallery App',
           theme: ThemeData(
             brightness:
-                appState.isDarkMode ? Brightness.dark : Brightness.light,
+                AppStatez().isDarkMode ? Brightness.dark : Brightness.light,
             primarySwatch: Colors.blue,
           ),
           home: SplashScreen(), // Ensure SplashScreen is correctly implemented
