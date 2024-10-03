@@ -1,11 +1,13 @@
 import 'package:evoke/app_state.dart';
 import 'package:evoke/views/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart'; // Ensure this import is included
 import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
+  MobileAds.instance
+      .initialize(); // Ensure you have the correct initialization for Google Mobile Ads
   runApp(
     ChangeNotifierProvider(
       create: (context) => AppState(),
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
                 appState.isDarkMode ? Brightness.dark : Brightness.light,
             primarySwatch: Colors.blue,
           ),
-          home: SplashScreen(),
+          home: SplashScreen(), // Ensure SplashScreen is correctly implemented
         );
       },
     );
