@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_page_indicator/flutter_page_indicator.dart';
+import 'package:flutter_page_indicator_tv/flutter_page_indicator.dart';
 import 'home_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
